@@ -102,9 +102,9 @@ struct Engine
         if (!pos){
             return false;
         }
-        idIndex.erase(id);
         deleteFromlastIndex(heap[*pos].last, *pos);
         heap[*pos].deleted = true;
+        idIndex.erase(id);
         return true;
     }
     
@@ -172,11 +172,11 @@ struct Engine
         idIndex.resetMetrics();
         cmpOut = 0;
         auto pos = idIndex.find(id);
+        cmpOut = idIndex.comparisons;
         if(!pos){
             return nullptr;
         }
         const Record* record = &heap[*pos];
-        cmpOut = idIndex.comparisons;
         return record;
     }
 
