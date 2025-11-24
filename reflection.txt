@@ -1,0 +1,5 @@
+In this implementation, I used a structure where public functions call private helper functions. This keeps the internal data protected and prevents direct access to private fields.
+
+For the rangeId and prefixLast functions, I used lambda expressions as callbacks in the BST rangeApply method, which makes it easy to handle multiple records at once.
+
+At first, I had an issue with the comparison count being incorrect. This happened because I reset the counter after running the search, so the result was overwritten. I fixed it by resetting the counter before each operation and reading the count afterward. After this change, the comparison numbers became accurate.
