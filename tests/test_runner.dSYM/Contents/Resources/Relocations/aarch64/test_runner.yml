@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/zhangzhen/github-classroom/CompSciBC/minidatabase-77amyfly/tests/test_runner'
+relocations:     []
+...
